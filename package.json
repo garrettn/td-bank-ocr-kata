@@ -1,0 +1,11 @@
+{
+  "name": "td-bank-ocr-kata",
+  "version": "1.0.0",
+  "description": "Code challenge for Test Double",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Garrett Nay <g@garrettnay.com>",
+  "license": "ISC"
+}
