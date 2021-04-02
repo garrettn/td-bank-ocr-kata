@@ -18,7 +18,62 @@ function decodeEntry(entry) {
 }
 
 // Decode an individual digit
-function decodeDigit(digit) {}
+function decodeDigit(digit) {
+  switch (digit) {
+    // prettier-ignore
+    case " _ " +
+         "| |" +
+         "|_|":
+      return '0'
+    //prettier-ignore
+    case "   " +
+         "  |" +
+         "  |":
+      return '1'
+    //prettier-ignore
+    case " _ " +
+         " _|" +
+         "|_ ":
+      return '2'
+    //prettier-ignore
+    case " _ " +
+         " _|" +
+         " _|":
+      return '3'
+    //prettier-ignore
+    case "   " +
+         "|_|" +
+         "  |":
+      return '4'
+    //prettier-ignore
+    case " _ " +
+         "|_ " +
+         " _|":
+      return '5'
+    //prettier-ignore
+    case " _ " +
+         "|_ " +
+         "|_|":
+      return '6'
+    //prettier-ignore
+    case " _ " +
+         "  |" +
+         "  |":
+      return '7'
+    //prettier-ignore
+    case " _ " +
+         "|_|" +
+         "|_|":
+      return '8'
+    //prettier-ignore
+    case " _ " +
+         "|_|" +
+         " _|":
+      return '9'
+    default:
+      return '?'
+  }
+}
 
 module.exports = {
   decodeNumbers,
