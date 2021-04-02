@@ -8,7 +8,26 @@ function decodeNumbers(rawData) {
 // Parse data into an array of arrays, where each
 // element of the inner array is the "flattened" digit
 function getEntries(data) {
-  return []
+  const lines = data.split('\n')
+  const entries = []
+  let i = 0
+  while (i < lines.length) {
+    if (!lines[i].length) {
+      i++
+      continue
+    }
+    entries.push(
+      Array.from(
+        { length: 9 },
+        (j) =>
+          lines[i].substr(j * 3 + 1, 3) +
+          lines[i + 1].substr(j * 3 + 1, 3) +
+          lines[i + 2].substr(j * 3 + 1, 3)
+      )
+    )
+    i += 3
+  }
+  return entries
 }
 
 // Decode the entire entry of flattened digits
