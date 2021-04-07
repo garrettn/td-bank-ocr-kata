@@ -12,6 +12,8 @@ function getEntries(data) {
   const entries = []
   let i = 0
   while (i < lines.length) {
+    // FIXME: This will also skip over the first lines if the digits are all
+    // two lines tall, i.e. 1 and 4
     if (!lines[i].length) {
       i++
       continue
