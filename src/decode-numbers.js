@@ -22,6 +22,7 @@ function getEntries(data) {
       Array.from(
         { length: 9 },
         (j) =>
+          // FIXME: Something is wrong here too. It's taking the wrong substrings.
           lines[i].substr(j * 3 + 1, 3) +
           lines[i + 1].substr(j * 3 + 1, 3) +
           lines[i + 2].substr(j * 3 + 1, 3)
