@@ -8,13 +8,13 @@ function decodeNumbers(rawData) {
 // Parse data into an array of arrays, where each
 // element of the inner array is the "flattened" digit
 function getEntries(data) {
-  const lines = data.split('\n')
+  const lines = data.trim().split('\n')
   const entries = []
   let i = 0
-  while (i < lines.length) {
+  while (i < lines.length - 3) {
     // FIXME: This will also skip over the first lines if the digits are all
     // two lines tall, i.e. 1 and 4
-    if (!lines[i].length) {
+    if (i % 3 === 0 && !lines[i].length) {
       i++
       continue
     }
