@@ -4,7 +4,7 @@
   "description": "Code challenge for Test Double",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node test/decode-numbers.test.js"
   },
   "author": "Garrett Nay <g@garrettnay.com>",
   "license": "ISC",
